@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #0F1117;
+  --surface: #1A1F2E;
+  --surface2: #222840;
+  --surface3: #2A3050;
+  --border: rgba(99, 102, 241, 0.2);
+  --border2: rgba(99, 102, 241, 0.4);
+  --indigo: #6366f1;
+  --indigo2: #818cf8;
+  --emerald: #10b981;
+  --amber: #f59e0b;
+  --rose: #f43f5e;
+  --sky: #38bdf8;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: var(--navy);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+}
+
+/* Mono font stack */
+.font-mono {
+  font-family: "JetBrains Mono", "Fira Code", "Cascadia Code", ui-monospace,
+    monospace;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--surface3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--indigo);
+}
+
+/* Textarea */
+textarea {
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  color: var(--text);
+  resize: none;
+  outline: none;
+  line-height: 1.6;
+  transition: border-color 0.15s;
+  font-size: 12px;
+}
+textarea:focus {
+  border-color: var(--border2);
+}
+textarea::placeholder {
+  color: #3a4060;
+}
+
+/* Canvas dot grid */
+.canvas-grid {
+  background-image: radial-gradient(circle, #1f2640 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Table card drag */
+.table-card {
+  cursor: grab;
+}
+.table-card:active {
+  cursor: grabbing;
+}
